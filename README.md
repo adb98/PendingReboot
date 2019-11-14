@@ -4,7 +4,8 @@
 
 Module to detect Windows OS pending reboots.
 
-This module leverages WMI in order to query the Registry for various pending reboot detections.
+This module leverages CIM in order to query the Registry for various pending reboot detections.
+This also is compatible with PS6 and PS7
 
 ## How to use
 
@@ -29,6 +30,10 @@ Install-Module -Name PendingReboot
 * **SkipPendingFileRenameOperationsCheck**: Indicates that this function will not test the PendingFileRenameOperations MultiString Value property of the Session Manager registry key.  This parameter is useful for eliminating possible false positives. Many Anti-Virus packages will use the PendingFileRenameOperations MultiString Value in order to remove stale definitions and/or .dat files.
 
 ## Versions
+
+### 0.9.0.7
+
+* Rewrote with CIM for PS6 and PS7 compatibility
 
 ### 0.9.0.6
 
